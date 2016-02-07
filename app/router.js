@@ -6,7 +6,10 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('tasks');
+  this.resource('channels', function() {
+    this.route('random');
+  });
+  this.route('channels');
 });
 
 export default Router;
